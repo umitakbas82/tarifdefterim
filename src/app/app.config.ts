@@ -5,12 +5,18 @@ import { provideRouter } from '@angular/router';
 import { routes } from './app.routes';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import {AngularFireModule} from '@angular/fire/compat';
+import {AngularFirestore} from '@angular/fire/compat/firestore';
+import {AngularFireDatabaseModule} from '@angular/fire/compat/database';
+
+
 import { provideHttpClient } from '@angular/common/http';
 import { provideClientHydration } from '@angular/platform-browser';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
+    
     provideHttpClient(),
     provideClientHydration(),  
    
